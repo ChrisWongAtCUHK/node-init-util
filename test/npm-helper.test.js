@@ -1,5 +1,5 @@
 require('chai').should()
-const { yarnAdd, yarnInit } = require('../lib/npm-helper')
+const { eslintInit, yarnAdd, yarnInit } = require('../lib/npm-helper')
 
 describe('yarn', () => {
 	it('should detect existing package.json', () => {
@@ -8,5 +8,9 @@ describe('yarn', () => {
 
 	it('should install eslint husky lint-staged accordingly', () => {
 		yarnAdd()
+	})
+
+	it('should create .eslintrc.js', () => {
+		eslintInit()
 	})
 })
