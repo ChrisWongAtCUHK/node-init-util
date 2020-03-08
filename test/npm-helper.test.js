@@ -1,5 +1,5 @@
 require('chai').should()
-const { eslintInit, yarnAdd, yarnInit } = require('../lib/npm-helper')
+const { eslintInit, lintPreCommit,  yarnAdd, yarnInit } = require('../lib/npm-helper')
 
 describe('yarn', () => {
 	it('should detect existing package.json', () => {
@@ -12,5 +12,9 @@ describe('yarn', () => {
 
 	it('should create .eslintrc.js', () => {
 		eslintInit()
+	})
+
+	it('should alter package.json if necessary', () => {
+		lintPreCommit()
 	})
 })
