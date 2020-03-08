@@ -1,0 +1,35 @@
+{
+  "name": "node-init-util",
+  "version": "1.0.0",
+  "description": "Quick starter of NodeJS",
+  "bin": {
+    "node-init-util": "./index.js",
+    "node-init": "./index.js"
+  },
+  "scripts": {
+  },
+  "keywords": [
+    "node",
+	"init",
+	"git",
+	"husky",
+	"eslint",
+	"lint-staged"
+  ], 
+  "main": "index.js",
+  "author": "Chris Wong <wc38.wong@gmail.com",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+  }
+}
