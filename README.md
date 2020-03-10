@@ -31,3 +31,4 @@ node-init [options]
 	  }
 
 	```
+7. create lib/util.js if necessary
