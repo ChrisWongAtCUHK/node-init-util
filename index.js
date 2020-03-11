@@ -1,7 +1,11 @@
 #!/usr/bin/env node
+const { log } = require('./lib/util.js')
+const { getType } = require('./lib/cli-helper.js')
 const { eslintInit, lintPreCommit, utilInit, yarnAdd, yarnInit } = require('./lib/npm-helper.js')
 const { gitIgnore, gitInit } = require('./lib/git-helper.js')
 
+const type = getType()
+log(`type:${type}`)
 yarnInit()
 gitInit()
 gitIgnore()
