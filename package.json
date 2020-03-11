@@ -1,6 +1,6 @@
 {
   "name": "node-init-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quick starter of NodeJS",
   "bin": {
     "node-init-util": "./index.js",

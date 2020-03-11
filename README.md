@@ -7,7 +7,7 @@ npm install node-init-util -g
 
 ## Usage
 ```
-node-init [options]
+node-init [--type puppeteer]
 ```
 
 ## What this utility do

@@ -1,5 +1,5 @@
 require('chai').should()
-const { eslintInit, lintPreCommit, utilInit, yarnAdd, yarnInit } = require('../lib/npm-helper')
+const { eslintInit, lintPreCommit, utilInit, yarnAdd, yarnAddDev, yarnInit } = require('../lib/npm-helper')
 
 describe('yarn', () => {
 	it('should detect existing package.json', () => {
@@ -7,7 +7,12 @@ describe('yarn', () => {
 	})
 
 	it('should install eslint husky lint-staged accordingly', () => {
-		yarnAdd()
+		yarnAddDev()
+	})
+
+	it('should install puppeteer', () => {
+		const packageJson = yarnAddDev()
+		yarnAdd(packageJson, ['puppeteer'])
 	})
 
 	it('should create .eslintrc.js', () => {

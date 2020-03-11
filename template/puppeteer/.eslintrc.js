@@ -1,12 +1,14 @@
 module.exports = {
     env: {
-        es6: true,
-        mocha: true,
-        node: true
+			es6: true,
+			mocha: true,
+			node: true,
+			browser: true
     },
     extends: 'eslint:recommended',
     parserOptions: {
-        sourceType: 'module'
+			sourceType: 'module',
+			ecmaVersion: 2017
 		},
     rules: {
       'comma-dangle': 'error',
