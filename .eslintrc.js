@@ -41,7 +41,6 @@ module.exports = {
 			],
       'require-jsdoc': 'error',
 			semi: ['error', 'never'],
-      'sort-keys': 'error',
       strict: 'error',
       'valid-jsdoc': 'error'
 		}
