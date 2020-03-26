@@ -7,7 +7,9 @@
     "node-init": "./index.js"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+	"docs:dev": "vuepress dev docs",
+	"docs:build": "vuepress build docs"
   },
   "keywords": [
     "node",
@@ -37,7 +39,8 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "mocha": "^7.1.0",
-    "tmp": "^0.1.0"
+    "tmp": "^0.1.0",
+    "vuepress": "^1.4.0"
   },
   "dependencies": {
     "jsonfile": "^6.0.1",
