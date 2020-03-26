@@ -44,12 +44,15 @@ describe('command line', () => {
 			const eslintExists = fs.existsSync(path.resolve(options.cwd, '.eslintrc.js'))
 			// copy lib/util.js
 			const utilExists = fs.existsSync(path.resolve(options.cwd, 'lib', 'util.js'))
+			// copy docs
+			const docsExists = fs.existsSync(path.resolve(options.cwd, 'docs'))
 
 			expect(gitExists).to.be.true
 			expect(gitIgnoreExists).to.be.true
 			expect(pkgExists).to.be.true
 			expect(eslintExists).to.be.true
 			expect(utilExists).to.be.true
+			expect(docsExists).to.be.true
 		})
 	})
 

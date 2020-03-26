@@ -3,7 +3,7 @@ const { getType } = require('./lib/cli-helper')
 const { eslintInit, lintPreCommit, utilInit, yarnAdd, yarnAddDev, yarnInit, readPackageJsonSync, writePackageJsonSync } = require('./lib/npm-helper')
 const { gitIgnore, gitInit } = require('./lib/git-helper')
 const { createESLint, createMain } = require('./lib/fs-util')
-const { setVuePressScripts } = require('./lib/vue/vuepress-helper')
+const { setVuePressScripts, copyDocs } = require('./lib/vue/vuepress-helper')
 
 const type = getType()
 
@@ -33,6 +33,7 @@ packageJson = lintPreCommit(readPackageJsonSync())
 
 // VuePress
 packageJson = setVuePressScripts(packageJson)
+copyDocs()
 
 writePackageJsonSync(packageJson)
 utilInit()
