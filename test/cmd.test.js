@@ -53,7 +53,6 @@ describe('command line', () => {
 		})
 	})
 
-
 	it('puppeteer', () => {
 		const testName = 'puppeteer'
 		const cmd = spawn('node-init-util', ['--type', 'puppeteer'], options)

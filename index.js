@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { getType } = require('./lib/cli-helper')
-const { eslintInit, lintPreCommit, utilInit, yarnAdd, yarnAddDev, yarnInit } = require('./lib/npm-helper')
+const { eslintInit, lintPreCommit, utilInit, yarnAdd, yarnAddDev, yarnInit, readPackageJsonSync, writePackageJsonSync } = require('./lib/npm-helper')
 const { gitIgnore, gitInit } = require('./lib/git-helper')
 const { createESLint, createMain } = require('./lib/fs-util')
 
@@ -9,7 +9,7 @@ const type = getType()
 gitInit()
 gitIgnore()
 yarnInit()
-const packageJson = yarnAddDev()
+let packageJson = yarnAddDev(readPackageJsonSync())
 
 switch(type) {
 	case 'puppeteer':
@@ -28,5 +28,6 @@ switch(type) {
 }
 
 // default no type
-lintPreCommit()
+packageJson = lintPreCommit(readPackageJsonSync())
+writePackageJsonSync(packageJson)
 utilInit()
