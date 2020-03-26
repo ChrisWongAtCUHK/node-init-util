@@ -1,5 +1,5 @@
 require('chai').should()
-const { gitIgnore, gitInit } = require('../lib/git-helper')
+const { gitIgnore, gitInit } = require('@lib/git-helper')
 
 describe('git', () => {
 	it('should detect existing .git folder', () => {

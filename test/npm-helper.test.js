@@ -1,7 +1,7 @@
 require('chai').should()
 const { expect } = require('chai')
 
-const { eslintInit, lintPreCommit, utilInit, yarnAdd, yarnAddDev, yarnInit, readPackageJsonSync } = require('../lib/npm-helper')
+const { eslintInit, lintPreCommit, utilInit, yarnAdd, yarnAddDev, yarnInit, readPackageJsonSync } = require('@lib/npm-helper')
 
 describe('yarn', () => {
 	it('should detect existing package.json', () => {

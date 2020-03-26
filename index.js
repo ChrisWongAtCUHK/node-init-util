@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-const { getType } = require('./lib/cli-helper')
-const { eslintInit, lintPreCommit, utilInit, yarnAdd, yarnAddDev, yarnInit, readPackageJsonSync, writePackageJsonSync } = require('./lib/npm-helper')
-const { gitIgnore, gitInit } = require('./lib/git-helper')
-const { createESLint, createMain } = require('./lib/fs-util')
-const { setVuePressScripts, copyDocs } = require('./lib/vue/vuepress-helper')
+require('module-alias/register')
+const { getType } = require('@lib/cli-helper')
+const { eslintInit, lintPreCommit, utilInit, yarnAdd, yarnAddDev, yarnInit, readPackageJsonSync, writePackageJsonSync } = require('@lib/npm-helper')
+const { gitIgnore, gitInit } = require('@lib/git-helper')
+const { createESLint, createMain } = require('@lib/fs-util')
+const { setVuePressScripts, copyDocs } = require('@lib/vue/vuepress-helper')
 
 const type = getType()
 

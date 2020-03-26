@@ -4,7 +4,7 @@ const { execSync, spawn } = require('child_process')
 const { Buffer } = require('buffer')
 const { expect } = require('chai')
 const tmp = require('tmp')
-const { error } = require('../lib/util')
+const { error } = require('@lib/util')
 
 describe('command line', () => {
 	// node-init-util shoud print out messages correspondingly
