@@ -13,7 +13,8 @@
   },
   "_moduleAliases": {
     "@root": ".",
-    "@lib": "lib"
+    "@lib": "lib",
+    "@template": "template"
   },
   "keywords": [
     "node",
